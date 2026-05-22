@@ -2,7 +2,7 @@
 
 A fully responsive, highly polished, and modern personal portfolio website built from scratch. It utilizes a glassmorphic design system, smooth scroll-linked parallax animations, and customized on-scroll reveals. Designed with dark-first aesthetics (auto-switching to high-contrast light mode on preference) and full accessibility integration.
 
-🌐 **Live Deployed Site:** [https://thanmahi-peruri-portfolio.vercel.app/](https://thanmahi-peruri-portfolio.vercel.app/)
+🌐 **Live Deployed Site:** [https://mypersonalportfolio-pink.vercel.app/](https://mypersonalportfolio-pink.vercel.app/)
 
 ---
 
