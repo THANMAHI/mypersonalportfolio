@@ -931,3 +931,27 @@ textarea.form-input {
   color: var(--text-tertiary);
   margin-top: 1rem;
 }
+
+/* Certification and Coding Profile Links */
+.certification-link, .coding-profile-link {
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-fast) !important;
+  text-decoration: none;
+}
+
+.certification-link:hover {
+  background: var(--color-primary-glow) !important;
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.coding-profile-link:hover {
+  background: var(--color-secondary-glow) !important;
+  color: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--color-secondary-glow);
+}
+

@@ -63,7 +63,7 @@ const Linkedin = ({ size = 20, ...props }) => (
   </svg>
 )
 
-// Resume Data & Custom Configuration
+// Resume Data & Custom Configuration (Extracted directly from resume annotations)
 const PROFILE_DATA = {
   name: 'Thanmahi Peruri',
   title: 'AI & ML Engineer',
@@ -78,7 +78,7 @@ const PROFILE_DATA = {
   email: 'thanmahi10@gmail.com',
   phone: '+91 93931 26688',
   github: 'https://github.com/THANMAHI',
-  linkedin: 'https://www.linkedin.com/in/thanmahi-peruri-a9163229b/', // Standard/Realistic LinkedIn URL
+  linkedin: 'https://www.linkedin.com/in/thanmahi-peruri-4b0068291/',
   skills: [
     {
       category: 'Languages',
@@ -108,14 +108,14 @@ const PROFILE_DATA = {
       description: 'Built a responsive job portal featuring dynamic filtering and search capabilities for local part-time opportunities. Implemented localStorage-based job saving and optimized UI rendering for extremely smooth client performance.',
       tags: ['React', 'CSS Modules', 'JavaScript', 'Local Storage'],
       github: 'https://github.com/THANMAHI/HustleHub',
-      demo: '#'
+      demo: 'https://thanmahi.github.io/HustleHub/'
     },
     {
       title: 'Multi-Tenant Project Platform',
       subtitle: 'SaaS PM Tool',
       description: 'Developed a scalable multi-tenant SaaS application with strict logical data isolation. Configured JWT authentication and Role-Based Access Control (RBAC). Built backend microservices and containerized the platform.',
       tags: ['Node.js', 'Express', 'MongoDB', 'Docker', 'JWT', 'RBAC'],
-      github: 'https://github.com/THANMAHI/multi-tenant-saas',
+      github: 'https://github.com/THANMAHI/final_saas_app_23A91A61B3',
       demo: '#'
     },
     {
@@ -123,17 +123,25 @@ const PROFILE_DATA = {
       subtitle: 'Asynchronous Processing System',
       description: 'Designed a high-throughput, fault-tolerant payment system utilizing Redis queues for asynchronous message queuing. Implemented secure webhook callbacks secured via HMAC hashing verification.',
       tags: ['Node.js', 'Redis', 'Webhooks', 'HMAC', 'Message Queues'],
-      github: 'https://github.com/THANMAHI/high-scale-payment-gateway',
+      github: 'https://github.com/THANMAHI/payment-gateway-extends-23A91A61B3',
       demo: '#'
     }
   ],
   certifications: [
-    'MongoDB Associated Developer',
-    'GitHub Foundations',
-    'Java (Oracle Academy)',
-    'Python (Cisco Networking Academy)',
-    'JavaScript Essentials I & II (Cisco)',
-    'HTML & CSS (Pearson VUE)'
+    { name: 'Java (Oracle Academy)', url: 'https://drive.google.com/file/d/1TMv7WkyUFMBcqcQgFYh52rYPh010kW6H/view?usp=sharing' },
+    { name: 'Python (Cisco Networking Academy)', url: 'https://drive.google.com/file/d/1o5yGO-NLIjBVcKU0GfRRpeHR3lFgBSG_/view?usp=sharing' },
+    { name: 'HTML & CSS (Pearson VUE)', url: 'https://drive.google.com/file/d/1i9wh9U21n0C6IhUBGam3QbHhIlpHGCuo/view?usp=sharing' },
+    { name: 'JavaScript Essentials I (Cisco)', url: 'https://drive.google.com/file/d/1wsQkm3EejiobKI22WfiRE2xYMOnfXioj/view?usp=sharing' },
+    { name: 'JavaScript Essentials II (Cisco)', url: 'https://drive.google.com/file/d/1P4IvOwJyM61vVorRCx2p-maFjKJNtVUF/view?usp=sharing' },
+    { name: 'C Programming (Cisco)', url: 'https://drive.google.com/file/d/1uWCedrHIEPJhnXb34BTYmSPa4qJd3jId/view?usp=sharing' },
+    { name: 'MongoDB Associated Developer', url: 'https://drive.google.com/file/d/1V6FfhRnbFxYjLgR5DYKuWVw1GoCZyN79/view?usp=sharing' },
+    { name: 'GitHub Foundations', url: 'https://drive.google.com/file/d/1D_gLqD1hywLM2YF1GC8VucP_M5TfUQ77/view?usp=sharing' }
+  ],
+  codingProfiles: [
+    { name: 'LeetCode', url: 'https://leetcode.com/u/thanmahi10/' },
+    { name: 'GeeksforGeeks', url: 'https://www.geeksforgeeks.org/user/thanmaqrux/' },
+    { name: 'HackerRank', url: 'https://www.hackerrank.com/profile/thanmahi10' },
+    { name: 'CodeChef', url: 'https://www.codechef.com/users/thanmahi' }
   ],
   achievements: [
     'Solved 600+ DSA problems across LeetCode, CodeChef, and GeeksforGeeks focusing on algorithmic efficiency.',
@@ -446,6 +454,7 @@ function App() {
             >
               <h3 className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: 800 }}>Quick Facts</h3>
               
+              {/* Education */}
               <div className="about-info-item">
                 <div className="about-info-icon">
                   <GraduationCap size={20} />
@@ -462,15 +471,67 @@ function App() {
                 </div>
               </div>
 
+              {/* Coding Profiles */}
+              <div className="about-info-item">
+                <div className="about-info-icon">
+                  <Terminal size={20} />
+                </div>
+                <div>
+                  <div className="about-info-title">Coding Profiles</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                    {PROFILE_DATA.codingProfiles.map((profile) => (
+                      <a 
+                        key={profile.name} 
+                        href={profile.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="project-tag coding-profile-link"
+                        style={{ 
+                          fontSize: '0.75rem', 
+                          padding: '0.3rem 0.65rem',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.35rem',
+                          borderColor: 'rgba(6, 182, 212, 0.25)',
+                          cursor: 'pointer',
+                          transition: 'all var(--transition-fast)'
+                        }}
+                      >
+                        {profile.name} <ExternalLink size={10} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Certifications */}
               <div className="about-info-item">
                 <div className="about-info-icon">
                   <Award size={20} />
                 </div>
                 <div>
-                  <div className="about-info-title">Certifications</div>
+                  <div className="about-info-title">Certifications (Click to View)</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                     {PROFILE_DATA.certifications.map((cert) => (
-                      <span key={cert} className="project-tag" style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem' }}>{cert}</span>
+                      <a 
+                        key={cert.name} 
+                        href={cert.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="project-tag certification-link"
+                        style={{ 
+                          fontSize: '0.75rem', 
+                          padding: '0.3rem 0.65rem',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.35rem',
+                          cursor: 'pointer',
+                          textDecoration: 'none',
+                          transition: 'all var(--transition-fast)'
+                        }}
+                      >
+                        {cert.name} <ExternalLink size={10} />
+                      </a>
                     ))}
                   </div>
                 </div>
