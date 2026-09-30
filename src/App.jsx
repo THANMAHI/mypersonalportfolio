@@ -111,11 +111,11 @@ const PROFILE_DATA = {
       demo: 'https://thanmahi.github.io/HustleHub/'
     },
     {
-      title: 'Multi-Tenant Project Platform',
-      subtitle: 'SaaS PM Tool',
-      description: 'Developed a scalable multi-tenant SaaS application with strict logical data isolation. Configured JWT authentication and Role-Based Access Control (RBAC). Built backend microservices and containerized the platform.',
-      tags: ['Node.js', 'Express', 'MongoDB', 'Docker', 'JWT', 'RBAC'],
-      github: 'https://github.com/THANMAHI/final_saas_app_23A91A61B3',
+      title: 'ZoneIn',
+      subtitle: 'AI-Powered Focus Learning Platform',
+      description: 'An AI-powered learning platform designed to help students stay focused while learning from YouTube. Features AI-generated learning roadmaps, quizzes, and notes (powered by Grok AI & Llama), a Chrome Extension Focus Mode that hides distractions, YouTube watch-time tracking, and analytics dashboards with Firebase authentication.',
+      tags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'Firebase Auth', 'Chrome Extension', 'Grok AI', 'Llama'],
+      github: 'https://github.com/alekhya178/ZoneIn',
       demo: '#'
     },
     {
